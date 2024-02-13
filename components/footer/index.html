@@ -1,0 +1,89 @@
+<div class="footer">
+	<div class="container">
+		<div class="footer__list">
+			<div class="footer__wrap footer__wrap--first">
+				<a href="">
+					<img src="/template/img/logof.png" alt="" />
+				</a>
+				<div class="footer__text">
+					{{{translate("Land.Discover the power of real estate with Agro - the one-stop platform for all your buying, selling, renting, trading, and auctioning needs. Our brand, Agro, is dedicated to providing a comprehensive solution for all your real estate requirements. Whether you're searching for your perfect home, looking to sell a property, or interested in renting out a space, Agro has got you covered. We also offer a range of services to help you build and fix your properties, so you can maximize your investment. With Agro, you can easily access the history of a property and make informed decisions. Plus, you can buy all the materials you need for your construction and repair projects right here on our platform. Experience the future of real estate with Agro today!")}}}
+				</div>
+			</div>
+			<div class="footer__list-wrap footer__wrap">
+				<div class="footer__item">
+					<a class="footer__links-title" href="https://agro.webart.work">{{{translate("Land.Agro")}}}</a>
+					<a href="https://agro.webart.work/plan" class="footer__link">{{{translate("Land.Business Plan")}}}</a>
+					<a href="https://agro.webart.work/wiki" class="footer__link">{{{translate("Land.Wiki")}}}</a>
+					<a href="https://agro.webart.work/team" class="footer__link">{{{translate("Land.Who we are")}}}</a>
+				</div>
+				<div class="footer__item">
+					<a class="footer__links-title" href="https://agro.webart.work/products">{{{translate("Land.Products")}}}</a>
+					<a href="https://agro.webart.work/products" class="footer__link">{{{translate("Land.Tables")}}}</a>
+					<a href="https://agro.webart.work/products" class="footer__link">{{{translate("Land.Kitchen")}}}</a>
+				</div>
+				<div class="footer__item">
+					<a class="footer__links-title" href="https://agro.webart.work/services">{{{translate("Land.Services")}}}</a>
+					<a href="https://agro.webart.work/services" class="footer__link">{{{translate("Land.Custom Tables")}}}</a>
+					<a href="https://agro.webart.work/services" class="footer__link">{{{translate("Land.Custom Kitchen")}}}</a>
+				</div>
+				<div class="footer__item">
+					<a class="footer__links-title" href="https://agro.webart.work/articles">{{{translate("Land.Articles")}}}</a>
+					<a href="https://agro.webart.work/articles" class="footer__link">{{{translate("Land.New Kitchen Designs")}}}</a>
+					<a href="https://agro.webart.work/articles" class="footer__link">{{{translate("Land.New Tables Designs")}}}</a>
+				</div>
+				<div class="footer__item">
+					<h3 class="footer__links-title">{{{translate("Land.Languages")}}}</h3>
+					<button class="footer__link" onclick="selectLanguage('en')">
+						English
+					</button>
+					<button class="footer__link" onclick="selectLanguage('ua')">
+						Українська
+					</button>
+				</div>
+			</div>
+			<div class="footer__wrap footer__wrap--last">
+				<div class="footer__wrap-socials">
+					<a href="" class="footer__btn btn">
+						<img src="/template/img/icons/v.svg" alt="" />
+					</a>
+					<a href="tel:+380960786786714" class="footer__btn btn">
+						<img src="/template/img/icons/viber.svg" alt="" />
+					</a>
+					<a href="https://t.me/agro_news" target="_blank" class="footer__btn btn">
+						<img src="/template/img/icons/tg.svg" alt="" />
+					</a>
+				</div>
+				<div class="footer__wrap-socials">
+					<a href="https://twitter.com/agro" target="_blank" class="footer__btn btn">
+						<img src="/template/img/icons/twit.svg" alt="" />
+					</a>
+					<a href="https://www.facebook.com/profile.php?id=100090910920539" class="footer__btn btn">
+						<img src="/template/img/icons/face.svg" alt="" />
+					</a>
+					<a href="https://instagram.com/agro?igshid=YmMyMTA2M2Y=" target="_blank" class="footer__btn btn">
+						<img src="/template/img/icons/inst.svg" alt="" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function selectLanguage(lang) {
+		fetch("/api/user/lang/" + lang, {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				window.scrollTo(0, 0);
+
+				location.reload();
+			})
+			.catch((error) => {
+				console.error("Error:", error);
+			});
+	}
+</script>

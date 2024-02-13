@@ -1,0 +1,43 @@
+<div class="wrapper">
+	<div class="content">
+		<div class="header__top header__top">
+			{{{'/template/components/topbar'|c({translate: translate})|safe}}}
+			<section class="main-screen">
+				<div class="container">
+					<div class="main__wrap">
+						<div class="main__content">
+							<div class="estate__info-wrap">
+								<div id="page" class="estate__wrap">
+									<div class="estate__slider">
+										<div class="column small-11 small-centered">
+											<div class="slider slider-single">
+												<div class="estate__slider-main"><img src="{{{service.thumb}}}" alt=""></div>
+												{% for thumb in service.thumbs %}
+												<div class="estate__slider-main"><img src="{{{thumb}}}" alt=""></div>
+												{% endfor %}
+											</div>
+											<div class="slider slider-nav">
+												<div  class="estate__slider-nav-photo"><img src="{{{service.thumb}}}" alt=""></div>
+												{% for thumb in service.thumbs %}
+												<div  class="estate__slider-nav-photo"><img src="{{{thumb}}}" alt=""></div>
+												{% endfor %}
+											</div>
+										</div>
+									</div>
+									<div class="estate__info">
+										<div class="estate__title">
+											{{{service.name}}}
+										</div>
+										<pre class="estate__description">{{{service.description|safe}}}</pre>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+	</div>
+	{{{'/template/components/footer'|c({translate: translate})|safe}}}
+</div>

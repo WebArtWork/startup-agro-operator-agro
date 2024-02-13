@@ -1,0 +1,74 @@
+/* Загальний стиль для контейнера з сервісами */
+.services-p__list {
+    display: flex;
+    gap: 20px; /* Проміжок між сервісами */
+}
+
+/* Стиль для блоку сервісу */
+.services-p__wrap {
+    flex: 1; /* Займати рівну ширину в рядку */
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #fff; /* Додав фоновий колір */
+}
+
+.services-p__wrap:hover {
+    transform: translateY(-5px); /* Зсув вверх при наведенні */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.services-p__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.services-p__img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.services-p__title {
+    font-size: 20px; /* Збільшено розмір шрифту */
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333; /* Змінено колір тексту */
+}
+
+.services-p__description {
+    margin-top: 10px;
+    color: #7e7e7e;
+    font-size: 14px; /* Зменшено розмір шрифту */
+}
+
+.services-p__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.services-p__btn a {
+    text-decoration: none;
+    color: #555555;
+    padding: 10px 15px; /* Зміни в цьому рядку */
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: #ffffff;
+    transition: background-color 0.2s, color 0.2s;
+    font-weight: bold; /* Додано жирний шрифт */
+    letter-spacing: 1px; /* Додано міжлітерну відстань */
+}
+
+.services-p__btn a:hover {
+    background-color: #acacac;
+    color: #f8f8f8;
+}
+
+/* Додайте відступ між кнопками */
+.services-p__btn-cart {
+    margin-left: 10px; /* Додайте бажаний відступ */
+}
